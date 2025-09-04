@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+/* reset css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(#730967, #96497e, #c267a5);
+}
+
+.container {
+  max-width: 1050px;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 12px;
+  margin: 0 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.container .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 20px;
+  gap: 80px;
+}
+
+.content .image-box {
+  flex: 1;
+  max-width: 55%;
+}
+
+.content .image-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.content .topic h2 {
+  font-size: 22px;
+  color: #96497e;
+}
+
+.content form {
+  width: 50%;
+  margin-right: 30px;
+}
+
+.content .input-box,
+.content .message-box {
+  position: relative;
+  width: 100%;
+  margin: 16px 0;
+}
+
+.content .input-box input,
+.content .message-box textarea {
+  width: 100%;
+  height: 50px;
+  border-radius: 6px;
+  font-size: 16px;
+  padding: 0 16px;
+  background-color: hsla(307, 85%, 24%, 0.184);
+  border: 2px solid transparent;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.content .message-box textarea {
+  min-height: 100px;
+  resize: none;
+  height: 100%;
+  padding-top: 10px;
+}
+
+.content .input-box label,
+.content .message-box label {
+  position: absolute;
+  left: 16px;
+  top: 15px;
+  font-size: 15px;
+  color: #636c72;
+  pointer-events: none;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  padding: 0 4px;
+}
+
+/* labels sobem ao focar */
+.content .input-box input:focus ~ label,
+.content .message-box textarea:focus ~ label {
+  top: -10px;
+  font-size: 14px;
+  color: #96497e;
+  background-color: #fff;
+}
+
+/* troca de borda e fundo ao focar */
+.content .input-box input:focus,
+.content .message-box textarea:focus {
+  border-color: #96497e;
+  background-color: #fff;
+}
+
+.content .input-box input[type="submit"] {
+  color: #fff;
+  background-color: #730967;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.content .input-box input[type="submit"]:hover {
+  background-color: #ce13b8;
+}
+
+/* responsividade */
+@media (max-width: 1000px) {
+  .content .image-box {
+    max-width: 70%;
+  }
+  .content {
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .content .image-box {
+    display: none;
+  }
+  .content form {
+    width: 100%;
+    margin-left: 0;
+  }
+}
