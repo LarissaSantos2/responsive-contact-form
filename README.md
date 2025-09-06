@@ -18,4 +18,4 @@ A página apresenta um **formulário estilizado** com campos para nome, e-mail e
 2. Acesse diretamente pelo link em qualquer navegador:  
 
 ```bash
-https://larissasantos2.github.io/rseponsive-contact-form/
+https://larissasantos2.github.io/responsive-contact-form/
